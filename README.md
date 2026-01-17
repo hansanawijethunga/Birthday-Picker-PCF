@@ -22,8 +22,7 @@ For local testing, use `pac pcf push` against a connected environment.
 ## Usage (Model-Driven & Canvas)
 1. Add the control to a form and bind the `dateValue` property to a Dataverse DateOnly column.
 2. Optional inputs:
-   - `minYear` (default 1901)
-   - `dayLabel`, `monthLabel`, `yearLabel`
+   - `minYear` (default 1901)  
 3. The control outputs a DateOnly value as an ISO string (`YYYY-MM-DD`) and avoids time zone offsets.
 
 ## Localization
@@ -32,11 +31,10 @@ For local testing, use `pac pcf push` against a connected environment.
 - Month names are sourced from `context.userSettings.dateFormattingInfo.monthNames` when available; otherwise, the control falls back to `Intl.DateTimeFormat` using the locale (default `en-AU`).
 
 ## Accessibility Notes
-- Comboboxes use Fluent UI v9 semantics with keyboard navigation (Arrow keys, Enter, Esc, Tab).
 - Required/invalid states set `aria-invalid` and `aria-describedby` with a single error message.
 - RTL layouts are supported through the Power Platform user settings.
 
 ## Known Edge Cases
 - Changing month/year auto-clamps invalid days (e.g., 31 -> 30 or Feb 29 -> Feb 28).
 - Selecting the current year limits months to the current month; selecting the current month limits days to the current day.
-- When month is not selected, the Day combobox is disabled to avoid invalid day counts.
+

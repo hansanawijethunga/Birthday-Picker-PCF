@@ -9,6 +9,9 @@
 # output directory
 /out
 
+# Birthday PCF folder
+/BirthdayPCF
+
 # msbuild output directories
 /bin
 /obj
